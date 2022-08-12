@@ -18,7 +18,7 @@ import com.bridgelabz.addressbook.service.IAddressBookService;
 
 @RestController
 @RequestMapping("/addressbook")
-public class Controller {
+public class AddressBookController {
 	@Autowired
 	IAddressBookService addressBookService;
 	
