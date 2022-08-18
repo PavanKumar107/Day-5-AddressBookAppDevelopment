@@ -1,5 +1,4 @@
 package com.bridgelabz.addressbook.model;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +8,7 @@ import javax.persistence.Table;
 import com.bridgelabz.addressbook.dto.AddressDTO;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "addressbook")
@@ -23,12 +23,8 @@ public class AddressBookModel {
 	private String city;	
 	private String state;
 	private long pincode;
-	private String email;
+	private String emailId;
 	private String password;
-
-	public AddressBookModel() {
-
-	}
 
 	public AddressBookModel(AddressDTO addressdto) {
 		this.aadharNumber = addressdto.getAadharNumber();
@@ -38,7 +34,10 @@ public class AddressBookModel {
 		this.city = addressdto.getCity();
 		this.state = addressdto.getState();
 		this.pincode = addressdto.getPincode();
-		this.email = addressdto.getEmail();
+		this.emailId = addressdto.getEmailId();
 		this.password = addressdto.getPassword();
+	}
+	public AddressBookModel() {
+		
 	}
 }
